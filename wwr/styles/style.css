@@ -2,22 +2,88 @@
     max-width: 1600px;  
     margin: 0 auto;
 }
+
 nav a {
     text-align: center;
+    color: #FFB703;
+    text-decoration: none;
 }
-#hero-msg h1  {
-    text-align: center;
-}
-#hero-msg h4 {
-    text-align: center;
-}
-.button-box {
-    text-align: center;
-}
-main {
+
+#hero-msg h1, #hero-msg h4   {
     text-align: center;
 }
 
-* {
-    border: 2px black;
+.button-box {
+    text-align: center;
 }
+main section{
+    text-align: center;
+}
+
+#background {
+    height: 725px;
+    background-color: #219EBC;
+}
+body {
+    background-color: white;
+}
+header{
+    background-color: #023047;
+}
+nav a:hover{
+    background-color: #219EBC;
+    color: #FFB703;
+}
+.book, .join{
+    background-color: #219EBC;
+    text-decoration: none;
+}
+.book:hover, .join:hover{
+    background-color: #219EBC;
+}
+.msg{
+    background-color: #219EBC;
+}
+footer{
+    background-color: #023047;
+    color: #FFB703;
+
+}
+
+.home-title {
+    color: #023047;
+}
+h4 {
+    color: #FFB703;
+}
+.book, .join {
+    color: #FFB703;
+}
+.book:hover, .join:hover {
+    color: #FFB703;
+}
+.msg h2 {
+    color: #023047;
+}
+.msg p {
+    color: #023047;
+}
+footer a {
+    color: #FFB703;
+    text-decoration: none;
+}
+footer a:hover {
+    color: #FFB703;
+}
+.logo, .icon {
+    width: 80px;
+}
+#hero-img {
+    width: 100%
+}
+footer p {
+    font-size: 1.2em;
+} 
+footer p a:hover {
+    text-decoration: underline;
+}   
