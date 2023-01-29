@@ -178,6 +178,6 @@ nav a:hover {
   border-right: 1px solid;
 }
 
-.wireframe {
-  width: 500px
+img #wireframe {
+  max-width: 500px
 }
