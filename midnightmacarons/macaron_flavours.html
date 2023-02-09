@@ -4,8 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Midnight Macarons</title>
-    <base href="https://sheenahamilton.github.io/wdd130/midnightmacarons/" target="_blank">
+    <base href="https://sheenahamilton.github.io" target="_blank">
     <link rel="stylesheet" href="styles/style.css" >
+
+    <script>
+        function myFunction(imgs) {
+          var expandImg = document.getElementById("expandedImg");
+          var imgText = document.getElementById("imgtext");
+          expandImg.src = imgs.src;
+          imgText.innerHTML = imgs.alt;
+          expandImg.parentElement.style.display = "block";
+        }
+    </script>
+
 </head>
 <body>
     <div id="content">
@@ -26,74 +37,132 @@
             </nav>
         </header>
         <main>
-            <h1>Flavours!</h1>
-            <p>
-                Flavors, flavors, flavors! There is an unlimited amount of combinations you can put together for these amazing macarons,  I love to experiment with different flavours all the time, but here are the flavours that I've made so far:
-              </p>
-              <p>
-                Ginerdoodle
-                White chocolate cranberry
-                Egg nog
-                Toblerone
-        
-                Peach Gobbler
-                Brown Butter cinnamon roll
-                Pumpkin fudge
-                Cookies & Scream
-        
-                Honey & Ginger
-                Sugar Cookie
-                S'mores
-                Pina Colada
-                Maple Pecan
-                Fruity Pebbles
-                Rolo
-                Raspberry Lemonade
-                Snickers
-                Lemon Bar
-                Churro Cheesecake
-                Key Lime
-                Cookie Dough
-                Snickerdoodle
-                Chocolate Covered Strawberry
-                Mini Egg
-                Strawberry Cheesecake
-                Cream Egg
-                Lemon Blueberry
-                Oreo Cheesecake
-                Raspberry
-                Rocky Road
-                Lucky Charms
-                Ginerbread
-                Peppermind Bark
-                Carrot Cake
-                …..and on!
-        
-              </p>
-              <p>Images for the Page 2</p>
-                <img src="/wdd130/midnightmacarons/images/confettimacarons.webp" alt="Confetti Macarons">
-                <img src="/wdd130/midnightmacarons/images/halloweenmacarons.webp" alt="Halloween Macarons">
-        
+            <div class="paragraphstyle1">
+                <div id="paragraphstyle1-text">
+                    <h1>What is a Macaron?</h1>
+                    <p> For starters...they're amazing! Once you've tried one of these amazing delicacies, you'll be hooked. I was, that's how I started down the path of perfecting these little goodies, and let me tell you, it was no easy task. They may look simple but are extremely picky to bake. After many trials and MANY failed batches I can finally say I've perfected my process. But enough about that...What is a macaron?
+                    </p>
+                    <p>A <span class="highlight_text">macaron</span> (mack-a-ROHN) is a confection made with almond flour to make two round, flat cookies. These delicate cookies sandwich a filling. Flavours and colors can be any variation. I do love to try new combinations!
+                    </p>
+                </div>
+                <img id="paragraphstyle1-img1" src="images/confettimacarons.webp" alt="Confetti Macarons">
+                <img id="paragraphstyle1-img2" src="images/halloweenmacarons.webp" alt="Halloween Macarons">
+            </div>
+            <div>
+                <h1>Flavours!</h1>
+                <p class="strong_text">Flavors, flavors, flavors...There is an unlimited amount of combinations you can put together for these amazing macarons! 
+                </p>
+                <p class="center">I love to experiment with different flavours all the time, but here are the flavours that I've made so far:
+                </p>
+            </div>
+                <!-- The grid: four columns -->
+            <div class="row">
+                <div class="column">
+                    <img src="images/flavours/15.webp" alt="cookieflavour" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                    <img src="images/flavours/16.webp" alt="cookieflavour" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                    <img src="images/flavours/17.webp" alt="cookieflavour" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                    <img src="images/flavours/18.webp" alt="cookieflavour" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                    <img src="images/flavours/19.webp" alt="cookieflavour" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                    <img src="images/flavours/20.webp" alt="cookieflavour" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                    <img src="images/flavours/21.webp" alt="cookieflavour" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                    <img src="images/flavours/22.webp" alt="cookieflavour" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                    <img src="images/flavours/23.webp" alt="cookieflavour" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                    <img src="images/flavours/24.webp" alt="cookieflavour" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                    <img src="images/flavours/25.webp" alt="cookieflavour" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                    <img src="images/flavours/26.webp" alt="cookieflavour" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                    <img src="images/flavours/27.webp" alt="cookieflavour" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                    <img src="images/flavours/28.webp" alt="cookieflavour" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                    <img src="images/flavours/29.webp" alt="cookieflavour" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                    <img src="images/flavours/30.webp" alt="cookieflavour" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                    <img src="images/flavours/31.webp" alt="cookieflavour" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                    <img src="images/flavours/32.webp" alt="cookieflavour" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                    <img src="images/flavours/33.webp" alt="cookieflavour" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                    <img src="images/flavours/34.webp" alt="cookieflavour" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                    <img src="images/flavours/35.webp" alt="cookieflavour" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                    <img src="images/flavours/36.webp" alt="cookieflavour" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                    <img src="images/flavours/37.webp" alt="cookieflavour" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                    <img src="images/flavours/38.webp" alt="cookieflavour" onclick="myFunction(this);">
+                </div>
+            </div>
+            
+            <!-- The expanding image container -->
+            <div class="container">
+                <!-- Close the image -->
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+            
+                <!-- Expanded image -->
+                <img id="expandedImg" style="width:100%">
+            
+                <!-- Image text -->
+                <div id="imgtext"></div>
+            </div>
+
         </main>
         <footer>
             <div id="footersplash">
                 <img id="footersplash-img" src="images/macaronsplate_bottom.webp" alt="Macarons plated">
             </div>
-            <div id="footerinfo">
+            <div id="footertext">
                 <p>Midnight Macarons &copy; 2023 - Kaitlin Laurie</p>
                 <p><a href="site-plan.html">Site Plan</a></p>
                 <p><a href="ordering.html">Contact Us</a></p>
-                <div class="social">
-                    <a href="https://facebook.com" target="_blank">
-                        <img src="images/facebook.png" alt="fb icon">
-                    </a>
-                    <a href="https://twitter.com" target="_blank">
-                        <img src="images/twitter.png" alt="twitter icon">
-                    </a>
-                    <a href="https://instagram.com" target="_blank">
-                        <img src="images/instagram.png" alt="instagram icon">
-                    </a>
-                </div>
+            </div>
+            <div class="social">
+                <a href="https://facebook.com" target="_blank">
+                    <img src="images/facebook.png" alt="fb icon">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="images/twitter.png" alt="twitter icon">
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="images/instagram.png" alt="instagram icon">
+                </a>
             </div>
         </footer>
     </div>
