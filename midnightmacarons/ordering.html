@@ -5,7 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Midnight Macarons</title>
     <base href="https://sheenahamilton.github.io/wdd130/midnightmacarons/" target="_blank">
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/style.css" >
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script>
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+      }
+    </script>
 </head>
 <body>
     <div id="content">
@@ -14,14 +40,11 @@
                 <img class="logo" src="images/mm_logo.jpg" alt="Midnight Macarons Logo" >
             </a>
             <div id="photosplash">
-                <div id="photosplash-box">
                     <img id="photosplash-img" src="images/macaronsplate_top.webp" alt="Macarons plated">
-                </div>
-
             </div>
             <nav>
                 <a class="navA" href="index.html">Home</a>
-                <a class="navB" href="macaron_flavours.html">Flavours & Options</a>
+                <a class="navB" id="active" href="macaron_flavours.html">Flavours & Options</a>
                 <a class="navC" id="active" href="#">Ordering Information</a>
             </nav>
         </header>
@@ -31,13 +54,13 @@
                 How to Order
         
                 I live in Edmonton, Alberta and my cookies are available locally for pickup. I offer new selections all the time and you can jump in to claim a box. To see my current selections follow me on Facebook, you can also contact me over Facebook if you'd like.
-              </p>
-              <p>
+            </p>
+            <p>
                 Have a custom order? Feel free to get a hold of me by email at: MidnightMacarons@gmail.com
         
                 I do have a busy schedule, please give at least a month's advance notice for any custom orders.
-              </p>
-              <p>
+            </p>
+            <p>
                 Cost
         
                 Custom made orders can sometimes be more depending on the requested flavours. Our pricing for our variety boxes are: 
@@ -53,49 +76,189 @@
                 Review 2
         
                 Review 3
-              </p>
-              <p>
-                Tips
-                <br><br>
-        
-                1.	Macarons need to be kept refrigerated. They are fine to have out at room temperature for a couple hours if they're on display, but avoid leaving them out, especially if it's warm! Not that we have to worry about that right now. 
-                <br><br>
-                2.	Macarons are best enjoyed at room temperature. If you're too impatient and eat them straight from the fridge or freezer, they can be crunchy and hard. Wait about 15 minutes out of the fridge, and about 30 minutes out of the freezer. 
-                <br><br>
-                3.	Keep your macs in an airtight container in the fridge and freezer. We don't want these delicate cookies drying out, or getting condensation built up in their container. My clear 12 pack boxes are airtight, so they are fine to be put in the fridge as is. Technically you can also freeze them as is too, but I always put the whole box into a large freezer ziplock bag first. Just to be safe. My 6 pack boxes are not airtight, so you can either put the whole box into a ziplock bag first, or just take them out of the box and put them into another airtight container. Or just eat them in one sitting! 
-                <br><br>
-                4.	If you aren't going to be eating your macarons within 5 days of picking them up, freeze em. The fresher the better, so when in doubt, freeze them until you need them. I've kept macarons frozen for 3-4 months and they came out perfectly fine! As long as they're in an airtight something!! 
-                <br><br>
-                Most importantly, enjoy! These cookies are a labor of love, and I want them to make people as happy as they make me!
-        
-        
-              </p>
-              <p>Images for the Page 3</p>
-                <img src="/wdd130/midnightmacarons/images/macaronpackaged.webp" alt="Boxed Macarons">
-                <img src="/wdd130/midnightmacarons/images/bigmacaronsboxed.webp" alt="Variety of Macarons">
-        
+            </p>
+
+            <p>Images for the Page 3</p>
+            <img src="/wdd130/midnightmacarons/images/macaronpackaged.webp" alt="Boxed Macarons">
+            <img src="/wdd130/midnightmacarons/images/bigmacaronsboxed.webp" alt="Variety of Macarons">
+
+
+                <!-- Slideshow container -->
+            <div class="slideshow-container">
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                    <div class="tip-highlight">
+                        <div class="tip-number"> TIP #1</div>
+                        <div class="tip-quicktext">KEEP YOUR MACARONS REFRIDGERATED <br>(OR FROZEN)</div>
+
+                        <div class="text">Macarons need to be kept refrigerated. They are fine to have out at room temperature for a couple hours if they're on display, but avoid leaving them out, especially if it's warm! Not that we have to worry about that right now. </div>
+                    </div>
+                </div>         
+                <div class="mySlides fade">
+                    <div class="tip-highlight">
+                        <div class="tip-number"> TIP #2</div>
+                        <div class="tip-quicktext">EAT YOUR MACARONS AT <br>ROOM TEMPERATURE</div>
+
+                        <div class="text">Macarons are best enjoyed at room temperature. If you're too impatient and eat them straight from the fridge or freezer, they can be crunchy and hard. Wait about 15 minutes out of the fridge, and about 30 minutes out of the freezer. </div>
+                    </div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="tip-highlight">
+                        <div class="tip-number"> TIP #3</div>
+                        <div class="tip-quicktext">KEEP YOUR MACARONS IN AN AIRTIGHT CONTAINER</div>
+
+                        <div class="text">Keep your macs in an airtight container in the fridge and freezer. We don't want these delicate cookies drying out, or getting condensation built up in their container. My clear 12 pack boxes are airtight, so they are fine to be put in the fridge as is. Technically you can also freeze them as is too, but I always put the whole box into a large freezer ziplock bag first. Just to be safe. My 6 pack boxes are not airtight, so you can either put the whole box into a ziplock bag first, or just take them out of the box and put them into another airtight container. Or just eat them in one sitting! 
+                        </div>
+                    </div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="tip-highlight">
+                        <div class="tip-number"> TIP #4</div>
+                        <div class="tip-quicktext">FOR STORAGE LONGER THAN 5 DAYS, KEEP THEM IN THE FREEZER<br>(UP TO 2 MONTHS)</div>
+
+                        <div class="text">If you aren't going to be eating your macarons within 5 days of picking them up, freeze em. The fresher the better, so when in doubt, freeze them until you need them. I've kept macarons frozen for 3-4 months and they came out perfectly fine! As long as they're in an airtight something!! </div>
+                    </div>
+                </div>
+            
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+
+            <h1>Most importantly, enjoy!</h1>
+            <p class="center">These cookies are a labor of love, and I want them to make people as happy as they make me!</p>
+
+               <!--Testimonials------------------->
+            <section id="testimonials">
+                <!--heading--->
+                <div class="testimonial-heading">
+                    <span>What people are saying</span>
+                </div>
+                <div class="testimonial-box-container">
+                    <!--BOX 1-------------------->
+                    <div class="testimonial-box">
+                        <div class="box-top">
+                            <div class="profile">
+                                <div class="name-user">
+                                    <h2>Shannon Vee</h2>
+                                </div>
+                            </div>
+                            <div class="reviews">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><!--Empty star-->
+                            </div>
+                        </div>
+                        <!--Comments---------------------------------------->
+                        <div class="client-comment">
+                            <p>Absolutely delicious macarons!<br><br><br><br></p>
+                        </div>
+                    </div>
+                    <!--BOX-2-------------->
+                    <div class="testimonial-box">
+                        <!--top------------------------->
+                        <div class="box-top">
+                            <div class="profile">
+                                <div class="name-user">
+                                    <h2>Crystal Wilson</h2>
+                                </div>
+                            </div>
+                            <div class="reviews">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><!--Empty star-->
+                            </div>
+                        </div>
+                        <!--Comments---------------------------------------->
+                        <div class="client-comment">
+                            <p>Seriously peeps, if you are local to YEG you need to try the macarons from Midnight Macarons! She always has the tastiest flavors and you won't be disappointed! I've tried a few (like most) of the flavors and they're always so good! ☺️</p>
+                        </div>
+                    </div>
+                    <!--BOX-3-------------->
+                    <div class="testimonial-box">
+                        <!--top------------------------->
+                        <div class="box-top">
+                            <div class="profile">
+                                <div class="name-user">
+                                    <h2>Maureen Luckwell</h2>
+                                </div>
+                            </div>
+                            <div class="reviews">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><!--Empty star-->
+                            </div>
+                        </div>
+                        <!--Comments---------------------------------------->
+                        <div class="client-comment">
+                            <p>We drive 40 mins from the NE just to get them, they're that delicious!</p>
+                        </div>
+                    </div>
+                    <!--BOX-4-------------->
+                    <div class="testimonial-box">
+                        <!--top------------------------->
+                        <div class="box-top">
+                            <div class="profile">
+                                <div class="name-user">
+                                    <h2>Cory McLaughlin</h2>
+                                </div>
+                            </div>
+                            <div class="reviews">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><!--Empty star-->
+                            </div>
+                        </div>
+                        <!--Comments---------------------------------------->
+                        <div class="client-comment">
+                            <p>Those last ones were so good, gone in a day here in the house!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
         <footer>
             <div id="footersplash">
                 <img id="footersplash-img" src="images/macaronsplate_bottom.webp" alt="Macarons plated">
             </div>
-            <div id="footerinfo">
+            <div id="footertext">
                 <p>Midnight Macarons &copy; 2023 - Kaitlin Laurie</p>
-                <p><a href="/site-plan.html">Site Plan</a></p>
-                <p><a href="/ordering.html">Contact Us</a></p>
-                <div class="social">
-                    <a href="https://facebook.com" target="_blank">
-                        <img src="images/facebook.png" alt="fb icon">
-                    </a>
-                    <a href="https://twitter.com" target="_blank">
-                        <img src="images/twitter.png" alt="twitter icon">
-                    </a>
-                    <a href="https://instagram.com" target="_blank">
-                        <img src="images/instagram.png" alt="instagram icon">
-                    </a>
-                </div>
+                <p><a href="site-plan.html">Site Plan</a></p>
+                <p><a href="ordering.html">Contact Us</a></p>
+            </div>
+            <div class="social">
+                <a href="https://facebook.com" target="_blank">
+                    <img src="images/facebook.png" alt="fb icon">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="images/twitter.png" alt="twitter icon">
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="images/instagram.png" alt="instagram icon">
+                </a>
             </div>
         </footer>
     </div>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+    
+    </script>
 </body>
 </html>
