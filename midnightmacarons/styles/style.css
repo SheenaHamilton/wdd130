@@ -202,6 +202,26 @@ footer a:hover {
     text-align: center;
 }
 
+/*Page 3*/
+#orders {
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+}
+
+.order_bullets {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    padding: 30px;
+}
+
+.order_bullets a{
+    font-family: var(--heading-font);
+    font-size: 1.7em;
+    color: var(--accent2-color);
+    text-decoration: none;
+    
+}
+
 /* The grid: Four equal columns that floats next to each other-------------------------- */
 .column {
     float: left;
@@ -262,10 +282,13 @@ footer a:hover {
 /* Slideshow container */
 .slideshow-container {
     max-width: 1000px;
+    min-height: 520px;
     position: relative;
     margin: auto;
-    background-image: url(/images/mmbowl.jpg); 
-    background-position:center;
+    background-image: url(/images/mmboxed2.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 120%;
     box-shadow: 5px 5px 10px #6f7364;
     padding: 40px;
 }
@@ -304,7 +327,7 @@ footer a:hover {
 
 /* block of white behind the tip area  */
 .tip-highlight {
-    background-color:  rgba(250, 246, 246, 0.8);
+    background-color:  rgba(250, 246, 246, 0.9);
     width:90%;
     margin:auto;
 }
@@ -333,7 +356,7 @@ footer a:hover {
 /* Long Text Description */
 .text {
     color: black;
-    font-size: 0.8 em;
+    font-size: 0.8em;
     line-height: 1.5em;
     font-weight: bolder;
     padding: 20px 50px;
